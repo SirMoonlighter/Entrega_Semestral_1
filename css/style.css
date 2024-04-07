@@ -1,0 +1,23 @@
+
+body{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.cuadro_login {
+    border: 1px solid blue;
+    padding: 10px;
+    width: 300px;
+}
+
+.boton_ingresar {
+    width: 200px;
+    margin: auto
+}
+
+h1{
+    color: blue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
