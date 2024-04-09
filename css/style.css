@@ -1,5 +1,6 @@
 
 body{
+    background-color: rgb(227, 233, 233);
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -16,8 +17,10 @@ body{
 }
 
 h1{
-    color: blue;
+    color: rgb(255, 255, 255);
     margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: 600;
     text-align: center;
+    text-shadow: 2px 2px #000;
 }
