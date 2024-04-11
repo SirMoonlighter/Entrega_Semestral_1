@@ -21,3 +21,8 @@ h1{
     margin-bottom: 20px;
     text-align: center;
 }
+
+.custom_button{
+    width: 200px;
+    height: 100px;
+}
