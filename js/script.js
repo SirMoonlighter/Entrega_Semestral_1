@@ -53,7 +53,7 @@ fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
   if (!this.files.length) {
-    fileList.innerHTML = "<p>No files selected</p>";
+    fileList.innerHTML = "<p>Sin archivo seleccionado</p>";
   } else {
     fileList.innerHTML = "";
     const list = document.createElement("ul");
