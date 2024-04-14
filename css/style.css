@@ -48,3 +48,13 @@ h1{
 /* div{
     height: 100%;
 } */
+
+#boleta_tabla_estados {
+    float: right;
+}
+
+#boleta_tabla_estados td {
+    text-align: center;
+    font-weight: bold;
+    padding-right: 50px;
+}
