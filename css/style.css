@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(227, 233, 233);
+    background-color: rgb(218, 208, 227);
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -19,12 +19,18 @@ body{
 
 h1{
 
-    color: rgb(47, 4, 146);
+    color: rgb(54, 20, 132);
 
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 675;
     text-align: center;
+    font-family:sans-serif;
+}
+
+.navbar{
+    background-color: rgb(185, 180, 231) !important;
+    font-size: 20px;
 }
 
 .container {
