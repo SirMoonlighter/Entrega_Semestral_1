@@ -1,18 +1,18 @@
-if (document.getElementById('mini_producto')) {
+// if (document.getElementById('mini_producto')) {
 
-    var tarjeta = document.getElementById('mini_producto').outerHTML;
+//     let tarjeta = document.getElementById('mini_producto').outerHTML;
 
-    var tarjetas = '';
+//     let tarjetas = '';
 
-    for (i = 0; i < 20; i++) {
+//     for (i = 0; i < 5; i++) {
 
-        tarjetas = tarjetas + tarjeta;
+//         tarjetas = tarjetas + tarjeta;
 
-    }
+//     }
 
-    document.getElementById('mini_producto').outerHTML = tarjetas;
+//     document.getElementById('mini_producto').outerHTML = tarjetas;
 
-}
+// }
 
 // Lee el contenido de un archivo llamado "menu_superior.html" donde está el código del menú de las páginas y lo copia al inicio de cada página
 
@@ -53,7 +53,7 @@ fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
   if (!this.files.length) {
-    fileList.innerHTML = "<p>No files selected</p>";
+    fileList.innerHTML = "<p>Sin archivo seleccionado</p>";
   } else {
     fileList.innerHTML = "";
     const list = document.createElement("ul");
