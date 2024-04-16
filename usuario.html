@@ -24,6 +24,7 @@
         <div class="row">
           <!-- Cajas de texto -->
           <div class="col-sm-12 col-md-6">
+            
             <!-- Rut -->
             <div class="mb-3">
               <label for="rut" class="form-label"> RUT </label>
@@ -123,16 +124,20 @@
             </div>
 
             <!-- Checkbox Suscripcion -->
-            <div class="mb-3 form-check">
+            <div class="mb-3">
               <input
                 type="checkbox"
                 class="form-check-input"
                 id="suscripcion"
+                aria-describedby="suscripcionHelp"
               />
               <label class="form-check-label" for="suscripcion">
                 Deseo subscribirme con un aporte de $30.000 mensuales y obtener
                 un 5% de descuento en mis compras.
               </label>
+              <div id="suscripcionHelp" class="form-text">
+                Desmarque esta opción si desea cancelar su suscripción.
+              </div>
             </div>
 
             <!-- Contraseña -->
@@ -203,7 +208,7 @@
             </div>
 
             <div id="fileList">
-              <p>No files selected!</p>
+              <p>Sin archivo seleccionado!</p>
             </div>
           </div>
         </div>
