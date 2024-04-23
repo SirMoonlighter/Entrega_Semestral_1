@@ -21,13 +21,14 @@
   <body>
     <div id="menu"></div>
 
-    <br>
+    <br><br>
 
     <h1>Mis Datos</h1>
 
-    <br>
+    <br><br>
     
     <p style="color: darkblue; font-weight: bold; text-align: center;">¡Aquí puedes actualizar tus datos!</p>
+    
     <form>
       <div class="container-fluid">
         <!-- Datos del formulario -->
@@ -36,8 +37,8 @@
           <div class="col-sm-12 col-md-6">
             
             <!-- Rut -->
-            <div class="mb-3">
-              <label for="rut" class="form-label"> RUT </label>
+            <div class="mb-3"> 
+              <label for="rut" class="form-label" style="font-weight: bolder;"> RUT </label>
               <input
                 required
                 type="text"
@@ -56,7 +57,7 @@
 
             <!-- Nombres -->
             <div class="mb-3">
-              <label for="nombres" class="form-label"> NOMBRES </label>
+              <label for="nombres" class="form-label" style="font-weight: bolder;"> NOMBRES </label>
               <input
                 required
                 type="text"
@@ -76,7 +77,7 @@
 
             <!-- Apellidos -->
             <div class="mb-3">
-              <label for="apellidos" class="form-label"> APELLIDOS </label>
+              <label for="apellidos" class="form-label" style="font-weight: bolder;"> APELLIDOS </label>
               <input
                 required
                 type="text"
@@ -87,7 +88,7 @@
                 aria-describedby="apellidosHelp"
               />
               <div id="apellidosHelp" class="form-text">
-                Escriba sus dos nombres.
+                Escriba sus dos apellidos.
               </div>
               <div class="invalid-feedback">
                 El campo Apellidos es obligatorio.
@@ -96,7 +97,7 @@
 
             <!-- Correo -->
             <div class="mb-3">
-              <label for="correo" class="form-label"> CORREO </label>
+              <label for="correo" class="form-label" style="font-weight: bolder;"> CORREO </label>
               <input
                 required
                 type="email"
@@ -116,7 +117,7 @@
 
             <!-- Dirección -->
             <div class="mb-3">
-              <label for="direccion" class="form-label"> DIRECCIÓN </label>
+              <label for="direccion" class="form-label" style="font-weight: bolder;"> DIRECCIÓN </label>
               <textarea
                 required
                 class="form-control"
@@ -134,7 +135,7 @@
             </div>
 
             <!-- Checkbox Suscripcion -->
-            <div class="mb-3">
+            <div class="mb-3 form-check">
               <input
                 type="checkbox"
                 class="form-check-input"
@@ -142,8 +143,7 @@
                 aria-describedby="suscripcionHelp"
               />
               <label class="form-check-label" for="suscripcion">
-                Deseo subscribirme con un aporte de $30.000 mensuales y obtener
-                un 5% de descuento en mis compras.
+                Deseo suscribirme con un aporte de $30.000 mensuales y obtener un 5% de descuento en mis compras.
               </label>
               <div id="suscripcionHelp" class="form-text">
                 Desmarque esta opción si desea cancelar su suscripción.
@@ -152,7 +152,7 @@
 
             <!-- Contraseña -->
             <div class="mb-3">
-              <label for="password" class="form-label"> CONTRASEÑA </label>
+              <label for="password" class="form-label" style="font-weight: bolder;"> CONTRASEÑA </label>
               <input
                 required
                 type="password"
@@ -173,14 +173,14 @@
 
             <!-- Repetir contraseña -->
             <div class="mb-3">
-              <label for="password2" class="form-label"> CONTRASEÑA </label>
+              <label for="password2" class="form-label" style="font-weight: bolder;"> CONFIRMAR NUEVA CONTRASEÑA </label>
               <input
                 required
                 type="password2"
                 class="form-control"
                 id="password2"
                 name="password2"
-                placeholder="Confirme su contraseña"
+                placeholder="Confirme su contraseña nueva"
                 aria-describedby="password2Help"
               />
               <div id="password2Help" class="form-text">
@@ -201,6 +201,11 @@
               </div> -->
 
           <div class="col-sm-12 col-md-6">
+
+            <div id="fileList">
+              <p>Sin archivo seleccionado!</p>
+            </div>
+            
             <div class="col-sm-12 col-md-6">
               <input
                 type="file"
@@ -217,10 +222,9 @@
               </a>
             </div>
 
-            <div id="fileList">
-              <p>Sin archivo seleccionado!</p>
-            </div>
+            
           </div>
+
         </div>
 
         <!-- 
@@ -243,6 +247,7 @@
             <button type="reset" class="btn btn-primary">Limpiar</button>
           </div>
         </div>
+
       </div>
     </form>
 

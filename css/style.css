@@ -14,7 +14,7 @@ body{
 
 .boton_ingresar {
     width: 200px;
-    margin: auto
+    margin: auto;
 }
 
 h1{
@@ -26,6 +26,25 @@ h1{
     font-weight: 675;
     text-align: center;
     font-family:sans-serif;
+}
+
+h2{
+
+    color: orangered;
+    margin-top: 20px;
+    font-weight: 550;
+    font-size:large;
+    font-family:sans-serif;
+
+}
+
+h3{
+
+    color: lightsalmon;
+    font-weight: 550;
+    font-size:large;
+    font-family:sans-serif;
+    
 }
 
 .navbar{

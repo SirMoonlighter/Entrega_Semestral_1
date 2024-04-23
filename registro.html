@@ -16,11 +16,11 @@
 
     <div id="menu"></div>
 
-    <br>
+    <br><br>
 
     <h1>Registro</h1>
 
-    <br>
+    <br><br>
 
     <form>
         <div class="container-fluid">
@@ -32,7 +32,7 @@
                     
                     <!-- Rut -->
                     <div class="mb-3">
-                        <label for="rut" class="form-label">
+                        <label for="rut" class="form-label" style="font-weight: bolder;">
                             RUT
                         </label>
                         
@@ -50,7 +50,7 @@
 
                     <!-- Nombres -->
                     <div class="mb-3">
-                        <label for="nombres" class="form-label">
+                        <label for="nombres" class="form-label" style="font-weight: bolder;">
                             NOMBRES
                         </label>
                         <input required type="text" class="form-control" id="nombres" name="nombres"
@@ -66,7 +66,7 @@
 
                     <!-- Apellidos -->
                     <div class="mb-3">
-                        <label for="apellidos" class="form-label">
+                        <label for="apellidos" class="form-label" style="font-weight: bolder;">
                             APELLIDOS
                         </label>
                         <input required type="text" class="form-control" id="apellidos" name="apellidos"
@@ -82,7 +82,7 @@
 
                     <!-- Correo -->
                     <div class="mb-3">
-                        <label for="correo" class="form-label">
+                        <label for="correo" class="form-label" style="font-weight: bolder;">
                             CORREO
                         </label>
                         <input required type="email" class="form-control" id="correo" name="correo"
@@ -98,7 +98,7 @@
 
                     <!-- Dirección -->
                     <div class="mb-3">
-                        <label for="direccion" class="form-label">
+                        <label for="direccion" class="form-label" style="font-weight: bolder;">
                             DIRECCIÓN
                         </label>
                         <textarea required class="form-control" id="direccion" rows="4"
@@ -116,13 +116,13 @@
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="suscripcion">
                         <label class="form-check-label" for="suscripcion">
-                            Deseo subscribirme con un aporte de $30.000 mensuales y obtener un 5% de descuento en mis compras.
+                            Deseo suscribirme con un aporte de $30.000 mensuales y obtener un 5% de descuento en mis compras.
                         </label>
                     </div>
 
                     <!-- Contraseña -->
                     <div class="mb-3">
-                        <label for="password" class="form-label">
+                        <label for="password" class="form-label" style="font-weight: bolder;">
                             CONTRASEÑA
                         </label>
                         <input required type="password" class="form-control" id="password" name="password"
@@ -138,7 +138,7 @@
 
                     <!-- Repetir contraseña -->
                     <div class="mb-3">
-                        <label for="password2" class="form-label">
+                        <label for="password2" class="form-label" style="font-weight: bolder;">
                             CONTRASEÑA
                         </label>
                         <input required type="password2" class="form-control" id="password2" name="password2"
@@ -164,23 +164,24 @@
 
                 <div class="col-sm-12 col-md-6">
                     
-                    
-                        <div class="col-sm-12 col-md-6">
-                            <input type="file" id="fileElem" multiple accept="image/*" style="display:none" />
-                            
-                                <a href="#" id="fileSelect">
-                                    <button type="submit" class="btn btn-primary">
-                                        Selecciona un archivo.
-                                    </button>
-                                </a>
-                            
-                            
-                        </div>
-                    
-
                     <div id="fileList">
                         <p>Sin archivo seleccionado!</p>
                     </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <input type="file" id="fileElem" multiple accept="image/*" style="display:none" />
+                        
+                            <a href="#" id="fileSelect">
+                                <button type="submit" class="btn btn-primary">
+                                    Selecciona un archivo.
+                                </button>
+                            </a>
+                        
+                        
+                    </div>
+                    
+
+                    
 
                 </div>
                 
