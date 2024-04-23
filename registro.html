@@ -139,7 +139,7 @@
                     <!-- Repetir contraseña -->
                     <div class="mb-3">
                         <label for="password2" class="form-label" style="font-weight: bolder;">
-                            CONTRASEÑA
+                            CONFIRMAR CONTRASEÑA
                         </label>
                         <input required type="password2" class="form-control" id="password2" name="password2"
                             placeholder="Confirme su contraseña"
@@ -148,7 +148,7 @@
                             Ingrese aquí la contraseña anteriormente ingresada.
                         </div>
                         <div class="invalid-feedback">
-                            El campo Repetir Contraseña es obligatorio y debe ser igual a la contraseña anterior.
+                            El campo Confirmar Contraseña es obligatorio y debe ser igual a la contraseña anterior.
                         </div>
                     </div>
 
@@ -165,23 +165,19 @@
                 <div class="col-sm-12 col-md-6">
                     
                     <div id="fileList">
-                        <p>Sin archivo seleccionado!</p>
+                        <p style="font-weight: bold;">¡Sin archivo seleccionado!</p>
                     </div>
 
                     <div class="col-sm-12 col-md-6">
                         <input type="file" id="fileElem" multiple accept="image/*" style="display:none" />
                         
-                            <a href="#" id="fileSelect">
-                                <button type="submit" class="btn btn-primary">
-                                    Selecciona un archivo.
-                                </button>
-                            </a>
-                        
-                        
+                        <a href="#" id="fileSelect">
+                            <button type="submit" class="btn btn-primary">
+                                Selecciona un archivo
+                            </button>
+                        </a>
+                                                
                     </div>
-                    
-
-                    
 
                 </div>
                 
@@ -204,7 +200,7 @@
             <div class="row">
                 <div class="col">
 
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                         Guardar
                     </button>
 

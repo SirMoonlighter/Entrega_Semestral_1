@@ -18,59 +18,62 @@
     <body>
     <div id="menu"></div>
 
-    <br>
+    <br><br>
 
     <h1>Mantenedor de Usuarios</h1>
 
-    <br>
+    <br><br>
     
+    <!-- Formulario y Tabla -->
     <form>
-        <div class="container-fluid">
+      <div class="container-fluid">
         <!-- Datos del formulario -->
         <div class="row">
             <!-- Cajas de texto -->
             <div class="col-sm-12 col-md-6">
             
-            <!-- Rut -->
+            <!-- ID -->
             <div class="mb-3">
-                <label for="rut" class="form-label"> ID </label>
+                <label for="id" class="form-label" style="font-weight: bolder;"> ID </label>
                 <input
                 required
                 type="text"
                 class="form-control"
                 id="id"
                 placeholder="12"
-                aria-describedby="rutHelp"
+                aria-describedby="idHelp"
               />
               <div id="rutHelp" class="form-text">
-                debe ingresar solo numeros
+                Debe ingresar solo numeros.
               </div>
               <div class="invalid-feedback">
                 El ID es un campo obligatorio.
               </div>
             </div>
 
+            <!-- TIPO CLIENTE -->
             <div class="mb-3">
-                <label for="rut" class="form-label"> Tipo de Cliente </label>
-                <p>
+              <label for="tipo" class="form-label" style="font-weight: bolder;"> Tipo de Cliente </label>
+              <p>
 
-                </p>
-                <input
-                type="checkbox"
-                class="form-check-input"
-                id="suscripcion"
-                aria-describedby="suscripcionHelp"/>
-                Cliente
-                <input
-                type="checkbox"
-                class="form-check-input"
-                id="suscripcion"
-                aria-describedby="suscripcionHelp"/>
-                Administrador
-              </div>
+              </p>
+              <input
+              type="checkbox"
+              class="form-check-input"
+              id="cliente"
+              aria-describedby="clienteHelp"/>
+              Cliente
+              <input
+              type="checkbox"
+              class="form-check-input"
+              id="administrador"
+              aria-describedby="administradorHelp"/>
+              Administrador
+            </div>
 
+            <!-- RUT -->
             <div class="mb-3">
-                <label for="rut" class="form-label"> RUT </label>
+                <label for="rut" class="form-label" style="font-weight: bolder;"> RUT </label>
                 <input
                   required
                   type="text"
@@ -85,11 +88,11 @@
                 <div class="invalid-feedback">
                   El RUT es un campo obligatorio.
                 </div>
-              </div>
+            </div>
 
             <!-- Nombres -->
             <div class="mb-3">
-              <label for="nombres" class="form-label"> NOMBRES </label>
+              <label for="nombres" class="form-label" style="font-weight: bolder;"> NOMBRES </label>
               <input
                 required
                 type="text"
@@ -109,7 +112,7 @@
 
             <!-- Apellidos -->
             <div class="mb-3">
-              <label for="apellidos" class="form-label"> APELLIDOS </label>
+              <label for="apellidos" class="form-label" style="font-weight: bolder;"> APELLIDOS </label>
               <input
                 required
                 type="text"
@@ -129,7 +132,7 @@
 
             <!-- Correo -->
             <div class="mb-3">
-              <label for="correo" class="form-label"> CORREO </label>
+              <label for="correo" class="form-label" style="font-weight: bolder;"> CORREO </label>
               <input
                 required
                 type="email"
@@ -149,7 +152,7 @@
 
             <!-- Dirección -->
             <div class="mb-3">
-              <label for="direccion" class="form-label"> DIRECCIÓN </label>
+              <label for="direccion" class="form-label" style="font-weight: bolder;"> DIRECCIÓN </label>
               <textarea
                 required
                 class="form-control"
@@ -167,7 +170,7 @@
             </div>
 
             <!-- Checkbox Suscripcion -->
-            <div class="mb-3">
+            <div class="mb-3 form-check">
               <input
                 type="checkbox"
                 class="form-check-input"
@@ -179,13 +182,13 @@
                 un 5% de descuento en mis compras.
               </label>
               <div id="suscripcionHelp" class="form-text">
-                Desmarque esta opción si desea cancelar su suscripción.
+                Desmarque esta opción si desea cancelar la suscripción.
               </div>
             </div>
 
             <!-- Contraseña -->
             <div class="mb-3">
-              <label for="password" class="form-label"> CONTRASEÑA </label>
+              <label for="password" class="form-label" style="font-weight: bolder;"> CONTRASEÑA </label>
               <input
                 required
                 type="password"
@@ -202,44 +205,52 @@
               <div class="invalid-feedback">
                 El campo Contraseña es obligatorio.
               </div>
+              <br>
               <button type="button" class="btn btn-primary">Generar Contraseña</button>
+              <br>
             </div>
 
-            
-          <div class="col-sm-12 col-md-6">
-            <div class="col-sm-12 col-md-6">
-              <input
-                type="file"
-                id="fileElem"
-                multiple
-                accept="image/*"
-                style="display: none"
-              />
+        </div>
 
-              <a href="#" id="fileSelect">
-                <button type="submit" class="btn btn-primary">
-                  Selecciona un archivo.
-                </button>
-              </a>
-            </div>
+        <div class="col-sm-12 col-md-6">
 
-            <div id="fileList">
-              <p>Sin archivo seleccionado!</p>
-            </div>
+          <div id="fileList">
+            <p>Sin archivo seleccionado!</p>
           </div>
+          
+          <div class="col-sm-12 col-md-6">
+            <input
+              type="file"
+              id="fileElem"
+              multiple
+              accept="image/*"
+              style="display: none"
+            />
+
+            <a href="#" id="fileSelect">
+              <button type="submit" class="btn btn-primary">
+                Selecciona un archivo.
+              </button>
+            </a>
+          </div>
+
+          
         </div>
 
         <div class="row">
           <div class="col">
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-success">Guardar</button>
             <button type="reset" class="btn btn-primary">Nuevo</button>
-            <button type="reset" class="btn btn-primary">Eliminar</button>
+            <button type="reset" class="btn btn-danger">Eliminar</button>
           </div>
         </div>
-      </div>
-      <p>
+        </div>
+        <p>
 
-      </p>
+        </p>
+      </div>
+
+      <!-- Tabla de Usuarios -->
       <table class="table">
         <thead>
           <tr>
@@ -290,9 +301,8 @@
           </tr>
         </tbody>
       </table>
+
     </form>
-
-
 
     <br>
 
