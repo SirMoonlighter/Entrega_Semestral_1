@@ -30,8 +30,9 @@
                 <!-- Datos del producto a ingresar a la bodega -->
                 <div class="col">
     
+                    <!-- Categoría -->
                     <div class="mb-3">
-                        <label for="categoria" class="form-label">
+                        <label for="categoria" class="form-label" style="font-weight: bolder;">
                             CATEGORÍA
                         </label>
                         <select id="categoria" 
@@ -47,8 +48,9 @@
                         </div>
                     </div>
     
+                    <!-- Nombre -->
                     <div class="mb-3">
-                        <label for="nombre" class="form-label">
+                        <label for="nombre" class="form-label" style="font-weight: bolder;">
                             NOMBRE DEL PRODUCTO
                         </label>
                         <input required type="text" class="form-control" id="producto" name="producto"
@@ -64,8 +66,9 @@
                             </div>
                     </div>
 
+                    <!-- Precio -->
                     <div class="mb-3">
-                        <label for="nombre" class="form-label">
+                        <label for="nombre" class="form-label" style="font-weight: bolder;">
                             PRECIO DEL PRODUCTO
                         </label>
                         <input required type="number" class="form-control" id="precio" name="precio"
@@ -81,8 +84,9 @@
                             </div>
                     </div>
 
+                    <!-- Suscriptor -->
                     <div class="mb-3">
-                        <label for="descuento" class="form-label">
+                        <label for="descuento" class="form-label" style="font-weight: bolder;">
                             DESCUENTO SUSCRIPTOR
                         </label>
                         <input required type="text" class="form-control" id="suscriptor" name="suscriptor"
@@ -98,8 +102,9 @@
                             </div>
                     </div>
 
+                    <!-- Oferta -->
                     <div class="mb-3">
-                        <label for="oferta" class="form-label">
+                        <label for="oferta" class="form-label" style="font-weight: bolder;">
                             DESCUENTO POR OFERTA
                         </label>
                         <input required type="text" class="form-control" id="oferta" name="oferta"
@@ -112,8 +117,9 @@
 
                     </div>
     
+                    <!-- Descripción -->
                     <div class="mb-3">
-                        <label for="descripcion" class="form-label">
+                        <label for="descripcion" class="form-label" style="font-weight: bolder;">
                             DESCRIPCIÓN
                         </label>
                         <textarea required class="form-control" id="descripcion" rows="4"
@@ -133,31 +139,29 @@
                 <!-- Imagen del producto -->
                 <div class="col-sm-12 col-md-6">
                         
-                        
+                    <div id="fileList">
+                        <p style="font-weight: bold;">¡Sin archivo seleccionado!</p>
+                    </div>  
+                    
                     <div class="col-sm-12 col-md-6">
+                        
                         <input type="file" id="fileElem" multiple accept="image/*" style="display:none" />
                         
-                            <a href="#" id="fileSelect">
-                                <button type="submit" class="btn btn-primary">
-                                    Selecciona un archivo.
-                                </button>
-                            </a>
-                        
-                        
+                        <a href="#" id="fileSelect">
+                            <button type="submit" class="btn btn-primary">
+                                Selecciona un archivo
+                            </button>
+                        </a>
+
                     </div>
-                
-    
-                    <div id="fileList">
-                        <p>Sin archivo seleccionado!</p>
-                    </div>
-    
+            
                 </div>
             </div>
     
             <!-- Botones -->
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                         Guardar
                     </button>
     
@@ -176,6 +180,8 @@
             Regresar
         </button>
     </a>
+
+    <br>
 
     <!-- Footer -->
     <footer id="footer">
