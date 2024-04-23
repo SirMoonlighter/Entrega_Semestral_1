@@ -17,105 +17,193 @@
         <div id="menu"></div>    
 
         <div id="Carrito"></div>
+        <h1>Carrito de compras</h1>
+    <!-- Tabla de productos de la boleta -->
+    <div class="row">
+        <div class="col">
+              
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Categoría</th>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>%Subscriptor</th>
+                <th>%Oferta</th>
+                <th>%Desc total</th>
+                <th>Descuentos</th>
+                <th>Precio a pagar</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                    <td>RPG</td>
+                    <td>The Witcher 3: Wild Hunt</td>
+                    <td>55.000</td>
+                    <td>5%</td>
+                    <td>10%</td>
+                    <td>15%</td>
+                    <td>8.250</td>
+                    <td>46.750</td>
+                    <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>Aventura</td>
+                    <td>Uncharted 4: A Thief's End</td>
+                    <td>75.000</td>
+                    <td>5%</td>
+                    <td>15%</td>
+                    <td>20%</td>
+                    <td>15.000</td>
+                    <td>60.000</td>
+                    <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>Acción</td>
+                <td>Grand Theft Auto V</td>
+                <td>90.000</td>
+                <td>5%</td>
+                <td>0%</td>
+                <td>5%</td>
+                <td>4.500</td>
+                <td>85.500</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>Deportes</td>
+                <td>FIFA 22</td>
+                <td>65.000</td>
+                <td>5%</td>
+                <td>10%</td>
+                <td>15%</td>
+                <td>9.750</td>
+                <td>55.250</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>RPG</td>
+                <td>Final Fantasy XV</td>
+                <td>80.000</td>
+                <td>5%</td>
+                <td>20%</td>
+                <td>25%</td>
+                <td>20.000</td>
+                <td>60.000</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>Aventura</td>
+                <td>The Last of Us Part II</td>
+                <td>70.000</td>
+                <td>5%</td>
+                <td>5%</td>
+                <td>10%</td>
+                <td>7.000</td>
+                <td>63.000</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>Acción</td>
+                <td>Assassin's Creed Valhalla</td>
+                <td>85.000</td>
+                <td>5%</td>
+                <td>15%</td>
+                <td>20%</td>
+                <td>17.000</td>
+                <td>68.000</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>Deportes</td>
+                <td>NBA 2K22</td>
+                <td>75.000</td>
+                <td>5%</td>
+                <td>10%</td>
+                <td>15%</td>
+                <td>11.250</td>
+                <td>63.750</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
+                <tr>
+                <td>RPG</td>
+                <td>Dragon Age: Inquisition</td>
+                <td>60.000</td>
+                <td>5%</td>
+                <td>10%</td>
+                <td>15%</td>
+                <td>9.000</td>
+                <td>51.000</td>
+                <td><a href="">Eliminar</a></td>
+                </tr>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Agregar</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filtrar
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">filtro 1</a></li>
-                                <li><a class="dropdown-item" href="#">Filtro 2</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Limpiar filtros</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    Precio sin IVA
+                    </td>
+                    <td>
+                    <input type="text" readonly
+                        name="precio_sin_iva" id="precio_sin_iva"
+                        value="492.825">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    Valor del IVA (19%)
+                    </td>
+                    <td>
+                    <input type="text" readonly
+                        name="valor_del_iva" id="valor_del_iva"
+                        value="111.675">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        Total a pagar:
+                    </td>
+                    <td>
+                    <input type="text" readonly
+                        name="total_a_pagar" id="total_a_pagar"
+                        value="553.250">
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
             </div>
-        </nav>
-
-        <br>
-
-        <h1>Carrito</h1>
-
-        <br>
-        
-        <div class="container-fluid">
-            <div class="row">
-
-                <div id="mini_producto" class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card" style="width: 18rem; margin: auto;">
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                        <img src="img/Mario_rpg.WebP" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Mario Bros RPG</h5>
-                            <p class="card-text">
-                                Precio total por unidades:
-                                <br>
-                                $55.000
-                            </p>
-
-                            <a href="#" ></a>
-
-                            <div class="btn-group">
-
-                                <a href="#" class="btn btn-primary">-</a>
-                                <a href="#" class="btn btn-primary active" aria-current="page">1</a>
-                                <a href="#" class="btn btn-primary">+</a>
-
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div id="mini_producto" class="col col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card" style="width: 18rem; margin: auto;">
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                        <img src="img/juego1.png" class="card-img-top" alt="...">
-
-                        <div class="card-body">
-                            <h5 class="card-title">Valkyria Chronicles 4</h5>
-                            <p class="card-text">
-                                Precio total por unidades:
-                                <br>
-                                $40.000
-                            </p>
-                            <a href="#" ></a>
-
-                            <div class="btn-group">
-
-                                <a href="#" class="btn btn-primary">-</a>
-                                <a href="#" class="btn btn-primary active" aria-current="page">1</a>
-                                <a href="#" class="btn btn-primary">+</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        </div>
         </div>
 
         <br>
 
         <div class="container text-center">
             <div style="justify-content: center;">
-                <button type="button" class="btn btn-primary btn-lg">
-                    Confirmar compra
+                <button type="button" class="btn btn-danger">
+                    Cancelar compra
                 </button>
+                <button type="button" class="btn btn-success">
+                    Pagar
+                </button>
+                
             </div>
         </div>
 
