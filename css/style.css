@@ -17,6 +17,11 @@ body{
     margin: auto;
 }
 
+.boton_informacion {
+    width: 200px;
+    margin: auto;
+}
+
 h1{
 
     color: rgb(54, 20, 132);
