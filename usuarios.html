@@ -54,21 +54,16 @@
             <!-- TIPO CLIENTE -->
             <div class="mb-3">
               <label for="tipo" class="form-label" style="font-weight: bolder;"> Tipo de Cliente </label>
-              <p>
 
-              </p>
-              <input
-              type="checkbox"
-              class="form-check-input"
-              id="cliente"
-              aria-describedby="clienteHelp"/>
-              Cliente
-              <input
-              type="checkbox"
-              class="form-check-input"
-              id="administrador"
-              aria-describedby="administradorHelp"/>
-              Administrador
+              <br>
+
+              <div>
+                <input type="radio" class="form-check-input" id="tipo_cliente" name="tipo_cliente" aria-describedby="clienteHelp"/>
+                  Cliente
+                <input type="radio" class="form-check-input" id="tipo_administrador" name="tipo_cliente" aria-describedby="administradorHelp"/>
+                  Administrador
+              </div>
+              
             </div>
 
             <!-- RUT -->
@@ -212,7 +207,9 @@
 
         </div>
 
-        <div class="col-sm-12 col-md-6">
+        <!-- Se conserva esta pieza en caso de necesitarla -->
+
+        <!-- <div class="col-sm-12 col-md-6">
 
           <div id="fileList">
             <p>Sin archivo seleccionado!</p>
@@ -232,11 +229,19 @@
                 Selecciona un archivo.
               </button>
             </a>
+          </div> -->
+
+          <!-- Imagen -->
+          <div class="col-sm-12 col-md-6">
+            <img class="registro_foto" src="img/empresario.png" alt="">
+                  <br><br>
+                  <input type="file" class="btn btn-ptimary">
           </div>
 
           
         </div>
 
+        <!-- Botones -->
         <div class="row">
           <div class="col">
             <button type="submit" class="btn btn-success">Guardar</button>
@@ -244,11 +249,10 @@
             <button type="reset" class="btn btn-danger">Eliminar</button>
           </div>
         </div>
-        </div>
-        <p>
-
-        </p>
       </div>
+      <p>
+
+      </p>
 
       <!-- Tabla de Usuarios -->
       <table class="table">
@@ -260,44 +264,44 @@
             <th scope="col">Nombres</th>
             <th scope="col">Apellidos</th>
             <th scope="col">Correo</th>
-            <th scope="col">direccion</th>
-            <th scope="col">Con Subscipcion</th>
-            <th scope="col">Imagen</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Con Suscripción</th>
+            <th style="text-align: center;" scope="col">Imagen</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">44</th>
-            <td>Cliente</td>
-            <td>22092269-3</td>
-            <td>Juan</td>
-            <td>Perez</td>
-            <td>jperez@gmail.com</td>
-            <td>San Juan Badista 123</td>
-            <td>Si</td>
-            <td>📷</td>
+            <th style="align-content: center;" scope="row">44</th>
+            <td style="align-content: center;">Cliente</td>
+            <td style="align-content: center;">22092269-3</td>
+            <td style="align-content: center;">Juan</td>
+            <td style="align-content: center;">Perez</td>
+            <td style="align-content: center;">jperez@gmail.com</td>
+            <td style="align-content: center;">San Juan Badista 123</td>
+            <td style="text-align: center; align-content: center;">Si</td>
+            <td><img class="container" src="img/empresario.png" style="width: 25%; height: 25%;" alt=""></td>
           </tr>
           <tr>
-            <th scope="row">65</th>
-            <td>Administrador</td>
-            <td>23122416-5</td>
-            <td>Ana</td>
-            <td>Torres</td>
-            <td>atorres@gmail.com</td>
-            <td>San Juan Badista 123</td>
-            <td>No</td>
-            <td>📷</td>
+            <th style="align-content: center;" scope="row">65</th>
+            <td style="align-content: center;">Administrador</td>
+            <td style="align-content: center;">23122416-5</td>
+            <td style="align-content: center;">Ana</td>
+            <td style="align-content: center;">Torres</td>
+            <td style="align-content: center;">atorres@gmail.com</td>
+            <td style="align-content: center;">San Juan Badista 123</td>
+            <td style="text-align: center; align-content: center;">No</td>
+            <td><img class="container" src="img/empresaria.png" style="width: 25%; height: 25%;" alt=""></td>
           </tr>
           <tr>
-            <th scope="row">45</th>
-            <td>Cliente</td>
-            <td>24385687-6</td>
-            <td>Pedro</td>
-            <td>Gonzalez</td>
-            <td>pgonzalezz@gmail.com</td>
-            <td>San Juan Badista 123</td>
-            <td>No</td>
-            <td>📷</td>
+            <th style="align-content: center;" scope="row">45</th>
+            <td style="align-content: center;">Cliente</td>
+            <td style="align-content: center;">24385687-6</td>
+            <td style="align-content: center;">Pedro</td>
+            <td style="align-content: center;">Gonzalez</td>
+            <td style="align-content: center;">pgonzalezz@gmail.com</td>
+            <td style="align-content: center;">San Juan Badista 123</td>
+            <td style="text-align: center; align-content: center;">No</td>
+            <td><img class="container" src="img/empresaria.png" style="width: 25%; height: 25%;" alt=""></td>
           </tr>
         </tbody>
       </table>
