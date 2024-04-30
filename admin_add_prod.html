@@ -21,235 +21,261 @@
 
     <br><br>
 
-    <!-- Botón Agregar nuevo producto -->
-    <a href="admin_add_plus.html" class="btn">
-        <button class="btn btn-success">
-            Agregar nuevo producto
-        </button>
-    </a>
+    <!-- Formulario y Tabla -->
+    <form>
+        <div class="container-fluid">
+            <!-- Datos del formulario -->
+            <div class="row">
+                <!-- Cajas de texto -->
+                <div class="col-sm-12 col-md-6">
+              
+                    <!-- ID -->
+                    <div class="mb-3">
+                        <label for="id_prod" class="form-label" style="font-weight: bolder;"> ID </label>
+                        <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="id_prod"
+                        placeholder="12"
+                        aria-describedby="id_prodHelp"
+                        />
+                        <div id="id_prodHelp" class="form-text">
+                        Debe ingresar solo numeros.
+                        </div>
+                        <div class="invalid-feedback">
+                        El ID es un campo obligatorio.
+                        </div>
+                    </div>
+    
+                    <!-- Categoría -->
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label" style="font-weight: bolder;">
+                            CATEGORÍA
+                        </label>
+                        <select id="categoria" 
+                                class="form-select" 
+                                aria-label="Selecciona la categoría">
+                            <option selected>Selecciona la categoría</option>
+                            <option value="1">RPG</option>
+                            <option value="2">Aventuras</option>
+                            <option value="3">Shooter</option>
+                            <option value="4">Scrolling Shooter</option>
+                            <option value="5">Fighting</option>
+                            <option value="6">Survival Horror</option>
+                        </select>
 
-    <!-- Dummy list of products -->
-    <div class="container-fluid">
+                        <div id="categoriaHelp" class="form-text">
+                            Seleccione la categoría del producto a agregar.
+                        </div>
 
-        <!-- Dummy Card 1 -->
-        <div class="row" >
- 
-            <!-- Dummy text and Buttons -->
-            <div class="col-sm-12 col-md-10">
-                <div class="card" style="width: 50rem auto;">
-                    <div class="card-body">
-                        <h5 class="card-title">Valkyria Chronicles 4</h5>
-                        <br>
-                        <p class="card-text">
-                          <h3>DISPONIBLE EN BODEGA</h3>
-                            <br>
-                            Categoría: TRPG
-                            <br>
-                            <p style="font-weight: bolder;">
-                                Precio: $8.000
-                                <br>
-                                Suscrito: $6.000
-                            </p>
-                            Descripción:
-                            "Diablo es un juego de rol y acción ambientado en un mundo 
-                            oscuro donde los jugadores combaten demonios para salvar 
-                            el reino de Tristram."
-                            <br>
-                            <p style="font-size: larger; font-weight: bolder;">
-                                En stock: 3 unidades
-                            </p>
-                        </p>
-                        
-                      </div>
+                    </div>
+    
+                    <!-- Nombre -->
+                    <div class="mb-3">
+                        <label for="nombre_prod" class="form-label" style="font-weight: bolder;"> NOMBRE </label>
+                        <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="nombre_prod"
+                        name="nombre_prod"
+                        placeholder="Ej: DOOM Eternal"
+                        aria-describedby="nombre_prodHelp"
+                        />
+                        <div id="nombre_prodHelp" class="form-text">
+                        Escriba el nombre del producto.
+                        </div>
+                        <div class="invalid-feedback">
+                        El campo Nombre es obligatorio.
+                        </div>
+                    </div>
+    
+                    <!-- Descripción -->
+                    <div class="mb-3">
+                        <label for="descripcion_prod" class="form-label" style="font-weight: bolder;"> DESCRIPCIÓN </label>
+                        <textarea
+                        required
+                        class="form-control"
+                        id="descripcion_prod"
+                        rows="4"
+                        placeholder="Ej: Albion Online es un MMORPG no lineal en el que escribes tu propia historia sin limitarte a seguir un camino prefijado..."
+                        aria-describedby="descripcion_prodHelp"
+                        ></textarea>
+                        <div id="descripcion_prodHelp" class="form-text">
+                        Escriba una descripción para el producto.
+                        </div>
+                        <div class="invalid-feedback">
+                        El campo Descripción es obligatorio.
+                        </div>
+                    </div>
+    
+                    <!-- Precio -->
+                    <div class="mb-3">
+                        <label for="precio_prod" class="form-label" style="font-weight: bolder;"> PRECIO </label>
+                        <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="precio_prod"
+                        name="precio_prod"
+                        placeholder="Ej: $30000"
+                        aria-describedby="precio_prodHelp"
+                        />
+                        <div id="precio_prodHelp" class="form-text">
+                        Indique un precio para el producto.
+                        </div>
+                        <div class="invalid-feedback">
+                        El campo Precio es obligatorio.
+                        </div>
+                    </div>
+
+                    <!-- Suscriptor -->
+                    <div class="mb-3">
+                        <label for="suscriptor_prod" class="form-label" style="font-weight: bolder;"> DESCUENTO SUSCRIPTOR </label>
+                        <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="suscriptor_prod"
+                        name="suscriptor_prod"
+                        placeholder="Ej: 5%"
+                        aria-describedby="suscriptor_prodHelp"
+                        />
+                        <div id="suscriptor_prodHelp" class="form-text">
+                        Indique un descuento para suscriptores.
+                        </div>
+                        <div class="invalid-feedback">
+                        El campo Descuento Suscriptor es obligatorio.
+                        </div>
+                    </div>
+
+                    <!-- Oferta -->
+                    <div class="mb-3">
+                        <label for="oferta_prod" class="form-label" style="font-weight: bolder;"> DESCUENTO OFERTA </label>
+                        <input
+                        required
+                        type="text"
+                        class="form-control"
+                        id="oferta_prod"
+                        name="oferta_prod"
+                        placeholder="Ej: 15%"
+                        aria-describedby="oferta_prodHelp"
+                        />
+                        <div id="oferta_prodHelp" class="form-text">
+                        Indique un descuento por oferta si corresponde.
+                        </div>
+                        <!-- <div class="invalid-feedback">
+                        El campo Correo es obligatorio.
+                        </div> -->
+                    </div>
+  
                 </div>
-
-                <a href="admin_edit_prod.html" class="btn">
-                    <button class="btn btn-primary">
-                        Editar producto
-                    </button>
-                </a>
-
-                <button type="submit" class="btn btn-danger">
-                    Eliminar producto
-                </button>
-                
-            </div> 
+  
+                <!-- Se conserva esta pieza en caso de necesitarla -->
+        
+                <!-- <div class="col-sm-12 col-md-6">
+        
+                    <div id="fileList">
+                    <p>Sin archivo seleccionado!</p>
+                    </div>
+                    
+                    <div class="col-sm-12 col-md-6">
+                    <input
+                        type="file"
+                        id="fileElem"
+                        multiple
+                        accept="image/*"
+                        style="display: none"
+                    />
+        
+                    <a href="#" id="fileSelect">
+                        <button type="submit" class="btn btn-primary">
+                        Selecciona un archivo.
+                        </button>
+                    </a>
+                    </div> -->
+  
+                <!-- Imagen -->
+                <div class="col-sm-12 col-md-6">
+                <img class="registro_foto" src="img/juego1.png" width="75%">
+                        <br><br>
+                        <input type="file" class="btn btn-ptimary">
+                </div>
+  
             
-            <!-- Dummy Image -->
-            <div class="col-sm-12 col-md-2">
-                <div class="container">
-                    <img src="img/juego1.png" width="130%" height="315">
+            </div>
+  
+            <!-- Botones -->
+            <div class="row">
+                <div class="col">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="reset" class="btn btn-primary">Nuevo</button>
+                <button type="reset" class="btn btn-danger">Eliminar</button>
                 </div>
             </div>
 
         </div>
 
-        <br>
+        <p>
+  
+        </p>
+  
+        <!-- Tabla de Productos -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Nombre</th>
+              <th width="50%" scope="col">Descripción</th>
+              <th scope="col">Precio</th>
+              <th scope="col">% Desc Suscriptor</th>
+              <th scope="col">% Desc Oferta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <th style="align-content: center;" scope="row">44</th>
+                <td style="align-content: center;">RPG</td>
+                <td style="align-content: center;">Diablo IV</td>
+                <td style="align-content: center;">Diablo IV es un RPG y la cuarta entrega que sigue las aventuras de la saga Diablo. Unidad física, en perfecto estado.</td>
+                <td style="align-content: center;">$65000</td>
+                <td style="align-content: center;">5%</td>
+                <td style="align-content: center;">10%</td>
+            </tr>
+            <tr>
+                <th style="align-content: center;" scope="row">45</th>
+                <td style="align-content: center;">Scrolling Shooter</td>
+                <td style="align-content: center;">Mushihime-sama Futari</td>
+                <td style="align-content: center;">Mushihime-sama Futari es un Scrolling Shooter, secuela de Mushihime-sama en la que nos enfrentaremos a la madre de uno de los protagonistas de esta entrega como principal antagonista.</td>
+                <td style="align-content: center;">$10000</td>
+                <td style="align-content: center;">5%</td>
+                <td style="align-content: center;">2%</td>
+            </tr>
+            <tr>
+                <th style="align-content: center;" scope="row">46</th>
+                <td style="align-content: center;">Fighting</td>
+                <td style="align-content: center;">Tekken 8</td>
+                <td style="align-content: center;">En esta reciente entrega seguimos con los conflictos que giran en torno a la familia Mishima, acompaña nuevamente a Jin Kazama en lo que será un enfrentamiento final contra su padre, Kazuya Mishima.</td>
+                <td style="align-content: center;">$48000</td>
+                <td style="align-content: center;">5%</td>
+                <td style="align-content: center;">15%</td>
+            </tr>
+            <tr>
+                <th style="align-content: center;" scope="row">47</th>
+                <td style="align-content: center;">Survival Horror</td>
+                <td style="align-content: center;">Dead Space Remake</td>
+                <td style="align-content: center;">Revive nuevamente la entrega original de este título en un formato completamente renovado para las generaciones actuales, pero sin perder ese toque terrorífico que le caracterizó, acompaña una vez más a Isaac Clarke a través del UDG Ishimura y sobrevive a todos sus horrores.</td>
+                <td style="align-content: center;">$36500</td>
+                <td style="align-content: center;">5%</td>
+                <td style="align-content: center;">20%</td>
+            </tr>
 
-        <!-- Dummy Card 2 -->
-        <div class="row" >
- 
-            <!-- Dummy text and Buttons -->
-            <div class="col-sm-12 col-md-10">
-                <div class="card" style="width: 50rem auto;">
-                    <div class="card-body">
-                        <h5 class="card-title">Valkyria Chronicles 4</h5>
-                        <br>
-                        <p class="card-text">
-                            <h3>DISPONIBLE EN BODEGA</h3>
-                            <br>
-                            Categoría: TRPG
-                            <br>
-                            <p style="font-weight: bolder;">
-                                Precio: $8.000
-                                <br>
-                                Suscrito: $6.000
-                            </p>
-                            Descripción:
-                            "Diablo es un juego de rol y acción ambientado en un mundo 
-                            oscuro donde los jugadores combaten demonios para salvar 
-                            el reino de Tristram."
-                            <br>
-                            <p style="font-size: larger; font-weight: bolder;">
-                                En stock: 3 unidades
-                            </p>
-                        </p>
-                      </div>
-                </div>
-
-
-                <a href="admin_edit_prod.html" class="btn">
-                    <button class="btn btn-primary">
-                        Editar producto
-                    </button>
-                </a>
-
-                <button type="submit" class="btn btn-danger">
-                    Eliminar producto
-                </button>
-                
-            </div> 
-            
-            <!-- Dummy Image -->
-            <div class="col-sm-12 col-md-2">
-                <div class="container">
-                    <img src="img/juego1.png" width="130%" height="315">
-                </div>
-            </div>
-
-        </div>
-
-        <br>
-
-        <!-- Dummy Card 3 -->
-        <div class="row" >
-   
-            <!-- Dummy text and Buttons -->
-            <div class="col-sm-12 col-md-10">
-                <div class="card" style="width: 50rem auto;">
-                    <div class="card-body">
-                        <h5 class="card-title">Valkyria Chronicles 4</h5>
-                        <br>
-                        <p class="card-text">
-                            <h3>DISPONIBLE EN BODEGA</h3>
-                            <br>
-                            Categoría: TRPG
-                            <br>
-                            <p style="font-weight: bolder;">
-                                Precio: $8.000
-                                <br>
-                                Suscrito: $6.000
-                            </p>
-                            Descripción:
-                            "Diablo es un juego de rol y acción ambientado en un mundo 
-                            oscuro donde los jugadores combaten demonios para salvar 
-                            el reino de Tristram."
-                            <br>
-                            <p style="font-size: larger; font-weight: bolder;">
-                                En stock: 3 unidades
-                            </p>
-                        </p>
-                      </div>
-                </div>
-
-
-                <a href="admin_edit_prod.html" class="btn">
-                    <button class="btn btn-primary">
-                        Editar producto
-                    </button>
-                </a>
-
-                <button type="submit" class="btn btn-danger">
-                    Eliminar producto
-                </button>
-                
-            </div> 
-            
-            <!-- Dummy Image -->
-            <div class="col-sm-12 col-md-2">
-                <div class="container">
-                    <img src="img/juego1.png" width="130%" height="315">
-                </div>
-            </div>
-
-        </div>
-
-        <br>
-
-        <!-- Dummy Card 4 -->
-        <div class="row" >
-
-            <!-- Dummy text and Buttons -->
-            <div class="col-sm-12 col-md-10">
-                <div class="card" style="width: 50rem auto;">
-                    <div class="card-body">
-                        <h5 class="card-title">Valkyria Chronicles 4</h5>
-                        <br>
-                        <p class="card-text">
-                            <h3>DISPONIBLE EN BODEGA</h3>
-                            <br>
-                            Categoría: TRPG
-                            <br>
-                            <p style="font-weight: bolder;">
-                                Precio: $8.000
-                                <br>
-                                Suscrito: $6.000
-                            </p>
-                            Descripción:
-                            "Diablo es un juego de rol y acción ambientado en un mundo 
-                            oscuro donde los jugadores combaten demonios para salvar 
-                            el reino de Tristram."
-                            <br>
-                            <p style="font-size: larger; font-weight: bolder;">
-                                En stock: 3 unidades
-                            </p>
-                        </p>
-                      </div>
-                </div>
-
-
-                <a href="admin_edit_prod.html" class="btn">
-                    <button class="btn btn-primary">
-                        Editar producto
-                    </button>
-                </a>
-
-                <button type="submit" class="btn btn-danger">
-                    Eliminar producto
-                </button>
-                
-            </div> 
-            
-            <!-- Dummy Image -->
-            <div class="col-sm-12 col-md-2">
-                <div class="container">
-                    <img src="img/juego1.png" width="130%" height="315">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+          </tbody>
+        </table>
+  
+    </form>
     
     <br>
 
