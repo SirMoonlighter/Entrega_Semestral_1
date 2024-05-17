@@ -19,7 +19,7 @@
 
     <br><br>
     
-    <form>
+    <form id="formulario-registro">
         <div class="container-fluid">
 
             <!-- Datos del producto y su foto -->
@@ -34,8 +34,10 @@
                             CATEGORÍA
                         </label>
                         <select id="categoria" 
+                                name="categoria"
                                 class="form-select" 
-                                aria-label="Selecciona la categoría">
+                                aria-label="Selecciona la categoría"
+                                required>
                             <option selected>Selecciona la categoría</option>
                             <option value="1">RPG</option>
                             <option value="2">Aventuras</option>
@@ -53,9 +55,11 @@
                         <label for="nombre" class="form-label" style="font-weight: bolder;">
                             NOMBRE DEL PRODUCTO
                         </label>
-                        <select id="categoria" 
+                        <select id="nombre_prod_bodega"
+                                name="nombre_prod_bodega"
                                 class="form-select" 
-                                aria-label="Selecciona la categoría">
+                                aria-label="Selecciona el nombre"
+                                required>
                             <option selected>Selecciona un producto</option>
                             <option value="1">Valkyria Chronicles 4</option>
                             <option value="2">Metroid Dread</option>

@@ -1,27 +1,33 @@
 $(document).ready(function() {
 
-  // Agregar método de validación para RUT chileno
+// Agregar método de validación para RUT chileno
+
   $.validator.addMethod("rutChileno", function(value, element) {
-
     // Validar que el RUT tenga el formato correcto (8 o 9 dígitos + guión + dígito verificador)
-    var rutPattern = /^\d{7,8}-\d$/;
+    var rutPattern = /^\d{7,8}-[\dkK]$/;
     if (!rutPattern.test(value)) {
-        return false;
+      return false;
     }
-
     // Validar el dígito verificador
     var rutSinGuion = value.replace("-", "");
     var rut = rutSinGuion.slice(0, -1);
-    var dv = rutSinGuion.slice(-1);
+    var dv = rutSinGuion.slice(-1).toUpperCase(); // Convertir a mayúscula para comparar con "K"
     var factor = 2;
     var sum = 0;
+
     for (var i = rut.length - 1; i >= 0; i--) {
-        sum += parseInt(rut.charAt(i)) * factor;
-        factor = factor === 7 ? 2 : factor + 1;
+      sum += parseInt(rut.charAt(i)) * factor;
+      factor = factor === 7 ? 2 : factor + 1;
     }
     var dvCalculado = 11 - (sum % 11);
-    dvCalculado = dvCalculado === 11 ? "0" : dvCalculado === 10 ? "K" : dvCalculado.toString();
 
+    if (dvCalculado === 11) {
+      dvCalculado = "0";
+    } else if (dvCalculado === 10) {
+      dvCalculado = "K";
+    } else {
+      dvCalculado = dvCalculado.toString();
+    }
     return dv === dvCalculado;
   }, "El RUT no es válido (escriba sin puntos y con guión)");
 
@@ -44,6 +50,28 @@ $(document).ready(function() {
     return this.optional(element) || /^[A-Z\a-zs]*$/.test(value);
 
   }, "Sólo se permiten letras y espacios en blanco.");
+
+  $.validator.addMethod("noNegativos", function(value, element) {
+    // Verificamos si el valor es opcional (por ejemplo, en un campo no requerido)
+    // Si es opcional y está vacío, la validación es correcta
+    if (this.optional(element)) {
+        return true;
+    }
+    // Convertimos el valor a un número y verificamos que no sea negativo
+    return parseFloat(value) >= 0;
+  }, "No se permiten valores negativos.");
+
+  $.validator.addMethod("validCategory", function(value, element) {
+    return value !== "Selecciona la categoría";
+  }, "Por favor, selecciona una categoría válida.");
+
+  $.validator.addMethod("validNombre", function(value, element) {
+    return value !== "Selecciona un producto";
+  }, "Por favor, selecciona un producto válido.");
+
+  $.validator.addMethod("validUsuario", function(value, element) {
+    return value !== "";
+  }, "Por favor, selecciona una categoría válida.");
 
   $("#formulario-registro").validate({
     rules: {
@@ -77,6 +105,44 @@ $(document).ready(function() {
         maxlength: 15,
         equalTo: "#password",
       },
+      id_prod: {
+        required: true,
+        minlength: 5,
+        maxlength: 15,
+      },
+      nombre_prod: {
+        required: true,
+      },
+      descripcion_prod: {
+        required: true,
+      },
+      precio_prod: {
+        required: true,
+        noNegativos: true,
+      },
+      categoria: {
+        required: true,
+        validCategory: true,
+      },
+      cantidad: {
+        required: true,
+        noNegativos: true,
+      },
+      nombre_prod_bodega: {
+        required: true,
+        validNombre: true,
+      },
+      tipo_cliente: {
+        required: true,
+        validUsuario: true,
+      },
+      id_usuario: {
+        required: true,
+        minlength: 5,
+        maxlength: 15,
+      },
+      
+
     }, // --> Fin de reglas
     messages: {
       rut: {
@@ -109,6 +175,34 @@ $(document).ready(function() {
         minlength: "Repetir contraseña debe tener un mínimo de 5 caracteres",
         maxlength: "Repetir contraseña debe tener un máximo de 15 caracteres",
         equalTo: "Debe repetir la contraseña escrita anteriormente",
+      },
+      id_prod: {
+        required: "Producto debe tener ID",
+      },
+      nombre_prod: {
+        required: "Producto debe teber nombre",
+      },
+      descripcion_prod: {
+        required: "Producto debe tener Descripción",
+      },
+      precio_prod: {
+        required: "Producto debe tener Precio, no deben ser valores negativos.",
+      },
+      categoria: {
+        required: "Por favor elija una categoría.",
+      },
+      cantidad: {
+        required: "Por favor indique cantidad, no deben ser valores negativos.",
+      },
+      nombre_prod_bodega: {
+        required: "Por favor seleccione un producto",
+      },
+      tipo_cliente: {
+        required: "Elija una opción",
+        validUsuario: "Debe elegir un tipo de usuario.",
+      },
+      id_usuario: {
+        required: "Usuario debe tener ID",
       },
     }, // --> Fin de mensajes
   });

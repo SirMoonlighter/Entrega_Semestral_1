@@ -22,7 +22,7 @@
     <br><br>
 
     <!-- Formulario y Tabla -->
-    <form>
+    <form id="formulario-registro">
         <div class="container-fluid">
             <!-- Datos del formulario -->
             <div class="row">
@@ -37,6 +37,7 @@
                         type="text"
                         class="form-control"
                         id="id_prod"
+                        name="id_prod"
                         placeholder="12"
                         aria-describedby="id_prodHelp"
                         />
@@ -53,9 +54,12 @@
                         <label for="categoria" class="form-label" style="font-weight: bolder;">
                             CATEGORÍA
                         </label>
-                        <select id="categoria" 
+                        <select 
+                                id="categoria" 
+                                name="categoria"
                                 class="form-select" 
-                                aria-label="Selecciona la categoría">
+                                aria-label="Selecciona la categoría"
+                                required>
                             <option selected>Selecciona la categoría</option>
                             <option value="1">RPG</option>
                             <option value="2">Aventuras</option>
@@ -98,6 +102,7 @@
                         required
                         class="form-control"
                         id="descripcion_prod"
+                        name="descripcion_prod"
                         rows="4"
                         placeholder="Ej: Albion Online es un MMORPG no lineal en el que escribes tu propia historia sin limitarte a seguir un camino prefijado..."
                         aria-describedby="descripcion_prodHelp"
@@ -134,7 +139,7 @@
                     <div class="mb-3">
                         <label for="suscriptor_prod" class="form-label" style="font-weight: bolder;"> DESCUENTO SUSCRIPTOR </label>
                         <input
-                        required
+                        
                         type="text"
                         class="form-control"
                         id="suscriptor_prod"
@@ -154,7 +159,7 @@
                     <div class="mb-3">
                         <label for="oferta_prod" class="form-label" style="font-weight: bolder;"> DESCUENTO OFERTA </label>
                         <input
-                        required
+                        
                         type="text"
                         class="form-control"
                         id="oferta_prod"
