@@ -1,4 +1,5 @@
 $(document).ready(function() {
+//HACER UN DOCUMENTO JQUERY PARA CADA PAGINA.
 
 // Agregar método de validación para RUT chileno
 
@@ -31,6 +32,11 @@ $(document).ready(function() {
     return dv === dvCalculado;
   }, "El RUT no es válido (escriba sin puntos y con guión)");
 
+  // El siguiente Javascript obliga a que la caja de texto del rut, siempre escriba la letra "K" en mayúscula
+  document.getElementById('rut').addEventListener('keyup', function(e) {
+    e.target.value = e.target.value.toUpperCase();
+  });
+
   // Agregar método de validación para correo
   $.validator.addMethod("emailCompleto", function(value, element) {
 
@@ -50,16 +56,6 @@ $(document).ready(function() {
     return this.optional(element) || /^[A-Z\a-zs]*$/.test(value);
 
   }, "Sólo se permiten letras y espacios en blanco.");
-
-  $.validator.addMethod("noNegativos", function(value, element) {
-    // Verificamos si el valor es opcional (por ejemplo, en un campo no requerido)
-    // Si es opcional y está vacío, la validación es correcta
-    if (this.optional(element)) {
-        return true;
-    }
-    // Convertimos el valor a un número y verificamos que no sea negativo
-    return parseFloat(value) >= 0;
-  }, "No se permiten valores negativos.");
 
   $.validator.addMethod("validCategory", function(value, element) {
     return value !== "Selecciona la categoría";
@@ -118,7 +114,8 @@ $(document).ready(function() {
       },
       precio_prod: {
         required: true,
-        noNegativos: true,
+        number:true,
+        min:1,
       },
       categoria: {
         required: true,
@@ -126,7 +123,7 @@ $(document).ready(function() {
       },
       cantidad: {
         required: true,
-        noNegativos: true,
+        number:true,
       },
       nombre_prod_bodega: {
         required: true,
@@ -141,7 +138,18 @@ $(document).ready(function() {
         minlength: 5,
         maxlength: 15,
       },
-      
+      descuento_subs: {
+        required: true,
+        number:true,
+        min:0,
+        max:100,
+      },
+      descuento_oferta: {
+        required: true,
+        number:true,
+        min:0,
+        max:100,
+      }
 
     }, // --> Fin de reglas
     messages: {
